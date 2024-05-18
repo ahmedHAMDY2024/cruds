@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="head">
+        <h2>cruds</h2>
+        <p>creat read updat search </p>
+    </div>
+    <div class="inputs">
+        <input id="title" placeholder="title" class="title" type="text">
+        <div class="prics">
+            <input onkeyup="totle()" id="price" placeholder="price" class="price" type="number">
+            <input onkeyup="totle()" id="taxes" placeholder="taxes"class="taxes" type="number">
+            <input onkeyup="totle()" id="ads" placeholder="ads"class="ads" type="number">
+            <input onkeyup="totle()" id="discount" placeholder="discount"class="discount" type="number">
+            <small id="small" class="small"placeholder="total">total</small>
+        </div>
+        <input id="count" placeholder="count"class="count" type="number">
+        <input id="catigory" placeholder="catigory"class="catigory" type="text">
+        <button id="create" class="create" >create</button>
+    </div>
+    <div class="out">
+        <div class="btn-search">
+            <input onkeyup="searchData(this.value)" id="search-inpt" class="search-inpt"placeholder="search" type="text">
+        </div>
+        <div class="btn-searhc">
+            <button onclick=" searchMood (this.id)" id="search-py-title" class="search-py-title">search py title</button>
+            <button onclick=" searchMood (this.id)" id="search-py-categore" class="search-py-categore">search py category</button>
+        </div>
+        <div id="deletAll" class="deletAll"></div>
+        <table >
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>PRICE</th>
+            <th>TAXES</th>
+            <th>ADS</th>
+            <th>DISCOUNT</th>
+            <th>TOTAL</th>
+            <th>CATEGORY</th>
+            <th id=>UPDATE</th>
+            <th id=>DELETE</th>
+            <th>SHOW</th>
+            <tbody id="table"></tbody>
+        </table>
+    </div>
+
+
+
+
+
+    <script src="scrept.js"> </script>
+</body>
+</html>

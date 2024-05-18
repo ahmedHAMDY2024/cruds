@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width:80%;
+    margin:auto;
+    background-color: #111;
+}
+.head{
+    color: aliceblue;
+    text-align:center;
+    margin-top: 50px;
+    text-transform: capitalize;
+}
+
+.inputs input{
+    width: 100%;
+    padding: 6px;
+    border: none;
+    margin: 2px;
+    background-color: #222;
+    border-radius: 8%;   
+    margin: 5px;
+    color: aliceblue;
+    letter-spacing: 2px;
+}
+.prics input {
+    width: 20%;
+    border-radius: 8%;   
+    margin: 5px;
+    color: aliceblue;
+
+}
+small{
+    width: 17%;
+    background-color: tomato;
+}
+.create{
+    width: 100%;
+    background-color: #2a003d;
+    padding: 6px;
+    border: none;
+    border-radius: 20px;   
+    color: aliceblue;
+    margin: 7px;
+
+}
+.btn-searhc{
+    display: flex;
+    justify-content: space-between;
+}
+.search-inpt{
+    width: 100%;
+    padding: 6px;
+    border: none;
+    margin: 2px;
+    background-color: #222;
+    border-radius: 8%;   
+    margin: 5px;
+    color: aliceblue;
+    letter-spacing: 2px;
+}
+.btn-searhc button{
+    width: 30%;
+    background-color: #2a003d;
+    padding: 6px;
+    border: none;
+    border-radius: 20px;   
+    color: aliceblue;
+    margin: 10px;
+}
+table{
+    color: aliceblue;
+    width: 100%;
+    text-align: center;
+ 
+
+}
+table, tr {
+    
+    border: 2px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+
+  }
+
+table button{
+    background-color: #2a003d;
+    padding: 6px;
+    border: none;
+    border-radius: 20px;   
+    color: aliceblue;
+    margin: 10px;
+}
+
+button:hover{
+    transform: scale(1.2);
+    background-color: #41025e;
+    transition: all 1s;
+}
+input:focus{
+    transform: scale(1.1);
+    transition: all 1s;
+
+}
+
+#delete_all{
+    
+    background-color: #2a003d;
+    padding: 6px;
+    border: none;
+    border-radius: 20px;   
+    color: aliceblue;
+    margin: 10px;
+    width: 100%;
+
+}
+
+
+
+
