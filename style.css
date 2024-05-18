@@ -6,7 +6,7 @@
 body{
     width:80%;
     margin:auto;
-    background-color: #111;
+    background: linear-gradient(#050050 ,#75f28e) ;
 }
 .head{
     color: aliceblue;
@@ -20,10 +20,10 @@ body{
     padding: 6px;
     border: none;
     margin: 2px;
-    background-color: #222;
+    background-color: #3a443c72;
     border-radius: 8%;   
     margin: 5px;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     letter-spacing: 2px;
 }
 .prics input {
@@ -56,7 +56,7 @@ small{
     padding: 6px;
     border: none;
     margin: 2px;
-    background-color: #222;
+    background-color: #0c204b5b;
     border-radius: 8%;   
     margin: 5px;
     color: aliceblue;
@@ -71,11 +71,12 @@ small{
     color: aliceblue;
     margin: 10px;
 }
-table{
-    color: aliceblue;
+
+.t-reed{  
+     
+     color: aliceblue;
     width: 100%;
     text-align: center;
- 
 
 }
 table, tr {
@@ -116,7 +117,35 @@ input:focus{
     width: 100%;
 
 }
+.head{
+    display: none;
+}
+
+#t_show{
+    
+    color: aliceblue;
+    background: linear-gradient(#3f0202 ,#b0b300b9) ;
+    border-radius: 50px;
+    width: 100%;
+    text-align: center;
+    border: none;
 
 
 
+}
+#t_show tr td{
+    padding: 5px;
 
+}
+#head{
+    width: 100%;
+    background: linear-gradient(#3d0000 ,#f5f907) ;
+    padding: 6px;
+    border: none;
+    border-radius: 20px;   
+    color: aliceblue;
+    margin: 10px;   
+}
+.displaynone{
+    display: none;
+}

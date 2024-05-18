@@ -16,11 +16,10 @@ let   table               =   document.getElementById     ("table");
 let   mood                =   "create"
 let   x ;
 let   moodSearch          =   "title"
+let   t_reed              =   document.getElementById     ("t_reed ")  
 
 
 
-
-//show
 
 let t_title         =document   .getElementById("t_TITLE")
 let t_price         =document   .getElementById("t_PRICE")
@@ -29,23 +28,10 @@ let t_ads           =document   .getElementById("t_ADS")
 let t_discount      =document   .getElementById("t_DISCOUNT")
 let t_catigory      =document   .getElementById("t_CATEGORY")
 let t_small         =document   .getElementById("t_TOTAL")
-    console.log(t_title );
-    function show(i){
-        t_title   .innerHTML      =  dataPro[i].title    
-        t_price   .innerHTML      =  dataPro[i].price
-        t_taxes   .innerHTML      =  dataPro[i].taxes 
-        t_ads     .innerHTML      =  dataPro[i].ads
-        t_discount.innerHTML      =  dataPro[i].discount
-        t_catigory.innerHTML      =  dataPro[i].catigory
-        t_small   .innerHTML      =  dataPro[i].small
-        x=i
-        console.log(dataPro[i].title);
-    
-    }
-
-
-
-
+let t_ID            =document   .getElementById("t_ID")
+let head            =document   .getElementById("head")
+let t_show          =document   .getElementById("t_show")
+let div_show        =document   .getElementById("show")
 
 
 
@@ -164,7 +150,7 @@ function readData(){
          <td>         ${dataPro[i].catigory}    </td>
          <td>        <button onclick="delet(${i})">delet</button>      </td>
          <td>        <button onclick="update(${i})">update</button>    </td>
-         <td>    <a href="file:///H:/priavet/project.html%202/crud/Untitled-1.html" target="blank"><button onclick="show(${i})">show</button><a></td>
+         <td>        <button onclick="show(${i})">show</button>        </td>
          </tr>
         `
     }
@@ -298,6 +284,7 @@ function update(i){
     discount.value   =  dataPro[i].discount
     catigory.value   =  dataPro[i].catigory
     small.innerHTML  =  dataPro[i].small
+
     create.innerHTML="update"
     create.style.background="#05e282"
     count.style.display="none"
@@ -326,9 +313,26 @@ function deleteAll()
 
 
 
+//show
+
+    console.log(t_title);
+    function show(i){
+        t_ID      .innerHTML      =  i+1
+        t_title   .innerHTML      =  dataPro[i].title;    
+        t_price   .innerHTML      =  dataPro[i].price;
+        t_taxes   .innerHTML      =  dataPro[i].taxes ;
+        t_ads     .innerHTML      =  dataPro[i].ads;
+        t_discount.innerHTML      =  dataPro[i].discount;
+        t_catigory.innerHTML      =  dataPro[i].catigory;
+        t_small   .innerHTML      =  dataPro[i].small;
+        div_show.classList.remove("displaynone");
+        // t_reed .classList.remove("displaynone");
+        scroll({top:195,behavior:"smooth"})
+        console.log(dataPro[i].title);
+    }
 
 
-
-
-
-
+    function btnHead(){
+        div_show.classList.add("displaynone");
+        t_reed .classList.add("displaynone");
+    }
