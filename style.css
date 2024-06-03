@@ -5,10 +5,11 @@
 
 body{
     width:80%;
+    min-height: 100vh;
     margin:auto;
-    background: linear-gradient(#050050 ,#75f28e) ;
+    background: linear-gradient(#4300c9bb ,#2200e128) ;
 }
-.head{
+.headr{
     color: aliceblue;
     text-align:center;
     margin-top: 50px;
@@ -21,7 +22,7 @@ body{
     border: none;
     margin: 2px;
     background-color: #3a443c72;
-    border-radius: 8%;   
+    border-radius: 5%;   
     margin: 5px;
     color: rgb(255, 255, 255);
     letter-spacing: 2px;
@@ -35,11 +36,11 @@ body{
 }
 small{
     width: 17%;
-    background-color: tomato;
+    background-color: rgba(173, 0, 0, 0.71);
 }
 .create{
     width: 100%;
-    background-color: #2a003d;
+    background: linear-gradient(rgb(45, 0, 65),#ae00ff);
     padding: 6px;
     border: none;
     border-radius: 20px;   
@@ -64,7 +65,7 @@ small{
 }
 .btn-searhc button{
     width: 30%;
-    background-color: #2a003d;
+    background: linear-gradient(rgb(45, 0, 65),#ae00ff);
     padding: 6px;
     border: none;
     border-radius: 20px;   
@@ -87,7 +88,7 @@ table, tr {
   }
 
 table button{
-    background-color: #2a003d;
+    background: linear-gradient(rgb(45, 0, 65),#ae00ff);
     padding: 6px;
     border: none;
     border-radius: 20px;   
@@ -96,8 +97,8 @@ table button{
 }
 
 button:hover{
-    transform: scale(1.2);
-    background-color: #41025e;
+    transform: scale(1.1);
+    background: linear-gradient(#ae00ff,rgb(45, 0, 65));
     transition: all 1s;
 }
 input:focus{
@@ -108,7 +109,7 @@ input:focus{
 
 #delete_all{
     
-    background-color: #2a003d;
+    background: linear-gradient(rgb(45, 0, 65),#ae00ff);
     padding: 6px;
     border: none;
     border-radius: 20px;   
@@ -125,11 +126,11 @@ input:focus{
     
     color: aliceblue;
     background: linear-gradient(#3f0202 ,#b0b300b9) ;
-    border-radius: 50px;
+    /* border-radius: 50px; */
     width: 100%;
     text-align: center;
     border: none;
-
+margin-bottom: 100px;
 
 
 }
@@ -145,6 +146,10 @@ input:focus{
     border-radius: 20px;   
     color: aliceblue;
     margin: 10px;   
+}
+#head:hover{
+    background: linear-gradient(#f5f907,#3d0000);
+
 }
 .displaynone{
     display: none;
