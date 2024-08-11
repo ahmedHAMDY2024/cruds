@@ -72,7 +72,7 @@ else {
 
 
 
-//creat element
+//create element
 
 create.onclick = function () {
     let newPro = {
