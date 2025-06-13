@@ -40,8 +40,7 @@ let print = document.getElementById("print")
 
 let totle = function () {
     if (price.value != "") {
-        let result = (+price.value + +taxes.value + +ads.value)
-            - +discount.value;
+        let result = +price.value - +discount.value;
         small.innerHTML = result
         small.style.backgroundColor = "#0f0"
         readData();
@@ -147,7 +146,7 @@ function readData() {
          <td>         ${dataPro[i].discount}    </td>
          <td>         ${dataPro[i].small}    </td>
          <td>         ${dataPro[i].catigory}    </td>
-         <td>        <button onclick="show(${i})">show</button>        </td>
+         <td>        <button onclick="show(${i})">اظهار</button>        </td>
          </tr>
         `
     }
@@ -156,7 +155,7 @@ function readData() {
 
 
     if (dataPro.length > 0) {
-        deletAll.innerHTML = `<button onclick="deleteAll()" id="delete_all">delet All(${dataPro.length})</button>`
+        deletAll.innerHTML = `<button onclick="deleteAll()" id="delete_all">حذف الكل(${dataPro.length})</button>`
 
 
 

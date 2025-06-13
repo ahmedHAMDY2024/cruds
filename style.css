@@ -20,8 +20,7 @@ body {
   margin-top: 50px;
   text-transform: capitalize;
   font-size: 50px;
-    filter: drop-shadow(8px 8px 10px#fff);
-
+  filter: drop-shadow(8px 8px 10px#fff);
 }
 .continar {
   position: absolute;
@@ -61,14 +60,19 @@ body {
   }
 }
 .prics input {
-  width: 18%;
+  gap: 10px;
+  width: 28%;
   border-radius: 8%;
   margin: 5px;
   color: aliceblue;
 }
-small {
-  width: 17%;
+.small {
+  width: 28%;
+  margin-left: 20px;
   background-color: rgba(173, 0, 0, 0.71);
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 20px;
 }
 .create {
   width: 100%;
