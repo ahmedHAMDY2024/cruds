@@ -1,101 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset='UTF-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://tse4.mm.bing.net/th?id=OIP.3xzrKA9pxfAvXlla4XN-CgHaE8&pid=Api&P=0&h=220" type="image/x-icon">
     <title>crud</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <div class="headr">
-        <h2>cruds</h2>
-        <p>creat read updat search </p>
+        <h2>المصطفى</h2>
+        <p>محاضر العملاء</p>
     </div>
-    <div class="inputs">
-        <input id="title" placeholder="title" class="title" type="text">
-        <div class="prics">
-            <input onkeyup="totle()" id="price" placeholder="price" class="price" type="number">
-            <input onkeyup="totle()" id="taxes" placeholder="taxes"class="taxes" type="number">
-            <input onkeyup="totle()" id="ads" placeholder="ads"class="ads" type="number">
-            <input onkeyup="totle()" id="discount" placeholder="discount"class="discount" type="number">
-            <small id="small" class="small"placeholder="total">total</small>
+    <div class="continar">
+
+        <div class="inputs">
+            <input id="title" placeholder="اسم العميل" class="title" type="text">
+            <div class="prics">
+                <input onkeyup="totle()" id="price" placeholder="المحصل" class="price" type="number">
+                <input onkeyup="totle()" id="taxes" placeholder="taxes" class="taxes" type="number">
+                <input onkeyup="totle()" id="ads" placeholder="ads" class="ads" type="number">
+                <input onkeyup="totle()" id="discount" placeholder="الطلبات" class="discount" type="number">
+                <small id="small" class="small" placeholder="صافى">بعد الطلبات</small>
+            </div>
+            <input id="count" placeholder="عدد مرات الذهاب" class="count" type="number">
+            <input id="catigory" placeholder="اسم الفنى" class="catigory" type="text">
+            <button id="create" class="create">انشاء</button>
         </div>
-        <input id="count" placeholder="count"class="count" type="number">
-        <input id="catigory" placeholder="catigory"class="catigory" type="text">
-        <button id="create" class="create" >create</button>
-    </div>
-    <div class="out">
-        <div class="btn-search">
-            <input onkeyup="searchData(this.value)" id="search-inpt" class="search-inpt"placeholder="search" type="text">
+        <div class="out">
+            <div class="btn-search">
+                <input onkeyup="searchData(this.value)" id="search-inpt" class="search-inpt" placeholder="بحث" type="text">
+            </div>
+            <div class="btn-searhc">
+                <button onclick=" searchMood (this.id)" id="search-py-title" class="search-py-title">بحث ب اسم
+                    العميل</button>
+                    <button onclick=" searchMood (this.id)" id="search-py-categore" class="search-py-categore">بحث ب اسم
+                        الفنى</button>
+                    </div>
+                    <div id="deletAll" class="deletAll"></div>
         </div>
-        <div class="btn-searhc">
-            <button onclick=" searchMood (this.id)" id="search-py-title" class="search-py-title">search py title</button>
-            <button onclick=" searchMood (this.id)" id="search-py-categore" class="search-py-categore">search py category</button>
-        </div>
-        <div id="deletAll" class="deletAll"></div>
- 
+        
         <div class="displaynone" id="show">
             <table id="t_show">
                 <tr><button onclick="btnHead()" id="head">head</button></tr>
-                <tr>     
-                    <td>ID</td>    
-                    <td><p id="t_ID"></p></td>      
+                <tr>
+                    <td>ID</td>
+                    <td>
+                        <p id="t_ID"></p>
+                    </td>
                 </tr>
-                <tr>     
-                    <td>TITLE</td>    
-                    <td><p id="t_TITLE"></p></td>      
+                <tr>
+                    <td>اسم العميل</td>
+                    <td>
+                        <p id="t_TITLE"></p>
+                    </td>
                 </tr>
-                <tr>     
-                    <td>PRICE</td>    
-                    <td><p id="t_PRICE"></p></td>      
+                <tr>
+                    <td>المحصل</td>
+                    <td>
+                        <p id="t_PRICE"></p>
+                    </td>
                 </tr>
-                <tr>     
-                    <td>TAXES</td>    
-                    <td><p id="t_TAXAS"></p></td>      
+                <tr>
+                    <td>الطلبات</td>
+                    <td>
+                        <p id="t_DISCOUNT"></p>
+                    </td>
                 </tr>
-                <tr>     
-                    <td>ADS</td>    
-                    <td><p id="t_ADS"></p></td>      
+                <tr>
+                    <td>الفنى</td>
+                    <td>
+                        <p id="t_CATEGORY"></p>
+                    </td>
                 </tr>
-                <tr>     
-                    <td>DISCOUNT</td>    
-                    <td><p id="t_DISCOUNT"></p></td>      
+                <tr>
+                    <td>الاجمالى</td>
+                    <td>
+                        <p id="t_TOTAL"></p>
+                    </td>
                 </tr>
-                <tr>     
-                    <td>CATEGORY</td>    
-                    <td><p id="t_CATEGORY"></p></td>      
-                </tr>
-                <tr>     
-                    <td>TOTAL</td>    
-                    <td ><p id="t_TOTAL"></p></td>      
-                </tr>
-                <!-- <tr><button onclick="printx()" id="print">print</button></tr> -->
-            </table>      
+            </table>
             
-            </div>
+        </div>
         <div id="t_reed">
-        <table class="t-reed">
-            <th>ID</th>
-            <th>TITLE</th>
-            <th>PRICE</th>
-            <th>TAXES</th>
-            <th>ADS</th>
-            <th>DISCOUNT</th>
-            <th>TOTAL</th>
-            <th>CATEGORY</th>
-            <th id=>UPDATE</th>
-            <th id=>DELETE</th>
-            <th>SHOW</th>
-            <tbody id="table"></tbody>
-        </table>
-       </div>
+            <table class="t-reed">
+                <th>ID</th>
+                <th>اسم العميل</th>
+                <th>المبلغ المحصل</th>
+                
+                <th>الطلبات</th>
+                <th>الاجمالى</th>
+                <th>الفنى</th>
+                <th>اظهار</th>
+                <tbody id="table"></tbody>
+            </table>
+        </div>
+        
     </div>
-
-
-
-
-
-    <script src="scrept.js"> </script>
-</body>
+        
+        
+        
+        
+        <script src="scrept.js"> </script>
+    </body>
+    
 </html>

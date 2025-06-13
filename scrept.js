@@ -78,8 +78,8 @@ create.onclick = function () {
     let newPro = {
         title: title.value,
         price: price.value,
-        taxes: taxes.value,
-        ads: ads.value,
+        // taxes: taxes.value,
+        // ads: ads.value,
         discount: discount.value,
         small: small.innerHTML,
         count: count.value,
@@ -119,15 +119,15 @@ create.onclick = function () {
 
 //
 //
-
+    
 
 //clear data aftar creat
 
 function clearData() {
     title.value = ""
     price.value = ""
-    taxes.value = ""
-    ads.value = ""
+    // taxes.value = ""
+    // ads.value = ""
     discount.value = ""
     small.innerHTML = ""
     count.value = ""
@@ -144,13 +144,9 @@ function readData() {
          <td>         ${[i + 1]}    </td>
          <td>         ${dataPro[i].title}    </td>
          <td>         ${dataPro[i].price}    </td>
-         <td>         ${dataPro[i].taxes}    </td>
-         <td>         ${dataPro[i].ads}    </td>
          <td>         ${dataPro[i].discount}    </td>
          <td>         ${dataPro[i].small}    </td>
          <td>         ${dataPro[i].catigory}    </td>
-         <td>        <button onclick="delet(${i})">delet</button>      </td>
-         <td>        <button onclick="update(${i})">update</button>    </td>
          <td>        <button onclick="show(${i})">show</button>        </td>
          </tr>
         `
@@ -205,13 +201,9 @@ function searchData(value) {
                     <td>         ${[i]}    </td>
                     <td>         ${dataPro[i].title}    </td>
                     <td>         ${dataPro[i].price}    </td>
-                    <td>         ${dataPro[i].taxes}    </td>
-                    <td>         ${dataPro[i].ads}    </td>
                     <td>         ${dataPro[i].discount}    </td>
                     <td>         ${dataPro[i].small}    </td>
                     <td>         ${dataPro[i].catigory}    </td>
-                    <td>        <button onclick="delet(${i})">delet</button>     </td>
-                    <td>        <button onclick="update(${i})">update</button>    </td>
                     <td>        <button onclick="show(${i})">show</button>        </td>
 
                     </tr>
@@ -238,13 +230,9 @@ function searchData(value) {
                     <td>         ${[i]}    </td>
                     <td>         ${dataPro[i].title}    </td>
                     <td>         ${dataPro[i].price}    </td>
-                    <td>         ${dataPro[i].taxes}    </td>
-                    <td>         ${dataPro[i].ads}    </td>
                     <td>         ${dataPro[i].discount}    </td>
                     <td>         ${dataPro[i].small}    </td>
                     <td>         ${dataPro[i].catigory}    </td>
-                    <td>        <button onclick="delet(${i})">delet</button>     </td>
-                    <td>        <button onclick="update(${i})">update</button>    </td>
                     <td>        <button onclick="show(${i})">show</button>        </td>
                     </tr>
                    `
@@ -279,8 +267,8 @@ function delet(i) {
 function update(i) {
     title.value = dataPro[i].title
     price.value = dataPro[i].price
-    taxes.value = dataPro[i].taxes
-    ads.value = dataPro[i].ads
+    // taxes.value = dataPro[i].taxes
+    // ads.value = dataPro[i].ads
     discount.value = dataPro[i].discount
     catigory.value = dataPro[i].catigory
     small.innerHTML = dataPro[i].small
@@ -318,8 +306,8 @@ function show(i) {
     t_ID.innerHTML = i + 1
     t_title.innerHTML = dataPro[i].title;
     t_price.innerHTML = dataPro[i].price;
-    t_taxes.innerHTML = dataPro[i].taxes;
-    t_ads.innerHTML = dataPro[i].ads;
+    // t_taxes.innerHTML = dataPro[i].taxes;
+    // t_ads.innerHTML = dataPro[i].ads;
     t_discount.innerHTML = dataPro[i].discount;
     t_catigory.innerHTML = dataPro[i].catigory;
     t_small.innerHTML = dataPro[i].small;
